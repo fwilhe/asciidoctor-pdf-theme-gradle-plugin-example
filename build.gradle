@@ -1,0 +1,29 @@
+buildscript {
+    repositories {
+        mavenLocal()
+    }
+    dependencies {
+        classpath group: 'com.github.fwilhe.asciidoctor_pdf_theme_gradle_plugin', name: 'AsciidoctorThemePlugin', version: '1.0-SNAPSHOT'
+        classpath 'org.asciidoctor:asciidoctorj-pdf:1.5.0-alpha.11'
+
+    }
+}
+
+plugins {
+    id 'org.asciidoctor.convert' version '1.5.3'
+}
+
+apply plugin: 'org.asciidoctor.convert'
+apply plugin: 'com.github.fwilhe.asciidoctor-pdf-theme'
+
+theme {
+    url = 'git@github.com:fwilhe/corporate-theme.git'
+    name = 'corporate'
+}
+
+asciidoctor {
+    backends    'pdf'
+    sourceDir  = new File("docs/asciidoc")
+}
+
+defaultTasks 'asciidoctor'

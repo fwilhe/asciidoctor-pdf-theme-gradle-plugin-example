@@ -1,0 +1,12 @@
+= asciidoctor-pdf-theme-gradle-plugin-example
+
+== Prerequisits
+
+Get https://github.com/fwilhe/asciidoctor-pdf-theme-gradle-plugin
+
+== Run
+
+----
+./gradlew
+----
+
