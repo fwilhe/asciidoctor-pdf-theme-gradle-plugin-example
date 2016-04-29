@@ -19,6 +19,7 @@ apply plugin: 'com.github.fwilhe.asciidoctor-pdf-theme'
 theme {
     url = 'git@github.com:fwilhe/corporate-theme.git'
     name = 'corporate'
+    themeVersion = '1.0.1' // optional, will be `master` branch if version is not set
 }
 
 asciidoctor {
