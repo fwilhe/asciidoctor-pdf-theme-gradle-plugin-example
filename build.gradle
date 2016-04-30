@@ -3,14 +3,13 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath group: 'com.github.fwilhe.asciidoctor_pdf_theme_gradle_plugin', name: 'AsciidoctorThemePlugin', version: '1.0-SNAPSHOT'
         classpath 'org.asciidoctor:asciidoctorj-pdf:1.5.0-alpha.11'
-
     }
 }
 
 plugins {
     id 'org.asciidoctor.convert' version '1.5.3'
+    id 'com.github.fwilhe.asciidoctor-pdf-theme' version '1.0'
 }
 
 apply plugin: 'org.asciidoctor.convert'
@@ -28,3 +27,4 @@ asciidoctor {
 }
 
 defaultTasks 'asciidoctor'
+
